@@ -1,0 +1,91 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Roboto;
+}
+section{
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+      grid-template-areas: "nav nav nav nav"
+                           "sidebar main main main"
+                           "sidebar content1 content2 content3"
+                           "footer footer footer footer";
+      grid-gap: 0.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 10px;
+}
+header{
+      grid-area: nav;
+      background: #a7ffeb;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.main{
+      grid-area: main;
+      background: #84ffff;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.sidebar{
+      grid-area: sidebar;
+      background: #18ffff;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.content1{
+      grid-area: content1;
+      background: #6fffd2;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.content2{
+      grid-area: content2;
+      background: #6fffd2;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.content3{
+      grid-area: content3;
+      background: #6fffd2;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+footer{
+      grid-area: footer;
+      background: #1de9ba;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 550px){
+      section{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+            grid-template-areas: "nav"
+                                 " sidebar"
+                                 "main"
+                                 "content1"
+                                 "content2"
+                                 "content3"
+                                 "footer";
+      }
+}
